@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# ReactJS Demo for Periodic Table of the Elements
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Uses a postgres database of periodic table of the elements to build a table in ReactJS.
 
 ## Available Scripts
 
