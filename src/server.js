@@ -19,8 +19,10 @@ const pool = new Pool({
 });
 
 app.get('/api/data', async (req, res) => {
+  const page = parseInt(req.query._page);
+  const pageSize = parseInt(req.query._limit);
   try {
-    const result = await pool.query('SELECT * FROM elements_elements');
+    const result = await pool.query("SELECT * FROM elements_elements LIMIT " + pageSize + " OFFSET " + page);
     res.json(result.rows);
   } catch (err) {
     console.error(err.message);
