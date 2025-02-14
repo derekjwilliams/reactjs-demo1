@@ -1,0 +1,14 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.detectIndentation": false,
+  "files.autoSave": "onWindowChange",
+ "editor.fontWeight": "500",
+ "editor.wordWrap": "on",
+ "workbench.sideBar.location": "left",
+ "editor.minimap.enabled": false,
+ "[html]": {
+     "editor.tabSize": 2,
+     "editor.insertSpaces": true
+ }
+}

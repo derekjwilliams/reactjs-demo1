@@ -9,4 +9,6 @@ psql -d "postgres://postgres:postgres@localhost/periodic_table" -f periodic_tabl
 
 npm install
 npm install --save-dev web-vitals
+
+node ../src/server.js
 npm start
