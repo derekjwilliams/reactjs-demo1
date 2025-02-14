@@ -10,6 +10,7 @@ const port = 5001;
 app.use(cors());
 app.use(bodyParser.json());
 
+// database-dms.c1oqwsaqc09s.us-east-2.rds.amazonaws.com
 const pool = new Pool({
   user: 'postgres',
   password: 'postgres',
