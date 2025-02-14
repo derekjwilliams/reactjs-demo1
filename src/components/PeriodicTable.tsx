@@ -1,15 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { ElementData } from '../types/elements';
 
-interface ElementData {
-  atomic_number: number
-  element: string
-  symbol: string
-  atomic_mass: number
-}
-
-function App() {
+function PeriodicTable() {
   const [data, setData] = useState<ElementData[]>([]);
-  const [limit, setLimit] = useState<number>(10);
+  const [limit] = useState<number>(10);
   const [offset, setOffset] = useState<number>(0);
   const [search, setSearch] = useState<string>('');
 
@@ -33,9 +27,9 @@ function App() {
         < thead >
           <tr>
             <th>Atomic Number </th>
-            < th > Element </th>
-            < th > Symbol </th>
-            < th > Atomic Mass </th>
+            <th> Element </th>
+            <th> Symbol </th>
+            <th> Atomic Mass </th>
           </tr>
         </thead>
         <tbody>
@@ -43,9 +37,9 @@ function App() {
             data.map((e) => (
               <tr key={e.atomic_number} >
                 <td className="col1-td" > {e.atomic_number} </td>
-                < td className="col2-td" > {e.element} </td>
-                < td className="col3-td" > {e.symbol} </td>
-                < td className="col4-td" > {e.atomic_mass} </td>
+                <td className="col2-td" > {e.element} </td>
+                <td className="col3-td" > {e.symbol} </td>
+                <td className="col4-td" > {e.atomic_mass} </td>
               </tr>
             ))
           }
@@ -63,4 +57,4 @@ function App() {
   )
 }
 
-export default App
+export default PeriodicTable
